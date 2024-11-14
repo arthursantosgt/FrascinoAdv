@@ -1,0 +1,878 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #000000;
+}
+dialog{
+    width: 80%;
+    max-height: 60%;
+    padding: 20px;
+    margin-left: 20px;
+    margin-top: 40px;
+    background-color:#e9e4d8;
+    font-family: 'Josefin Sans', sans-serif;
+}
+/*.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.whatsapp-button a {
+    display: block;
+    color: #fff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 60px;
+    text-decoration: none;
+}
+
+.whatsapp-button a:hover {
+    background-color: #0c1d0d;
+}
+#zapi-btn{
+    width: 100%;
+}*/
+#closeBtn{
+    width: 60px;
+    height: 30px;
+    margin-top: 10px;
+}
+.area-button{
+    padding: 20px;
+    margin-left: 80px;
+    
+}
+.area-button:hover{
+    background-color: #ccc; /* Cor de fundo no hover */
+    border-color: #000;
+}
+.container {
+    position: relative;
+}
+
+.cabecalho {
+    background-color: #0c0a07;
+    width: 100%;
+    height: 120px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#baixo {
+    background-color: #001b28;
+    width: 100%;
+    height: 180px;
+    z-index: 1;
+}
+
+#mail,
+#foot {
+    color: white;
+    font-family: 'Lora', serif;
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 10px;
+    z-index: 1;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 140px;
+    z-index: 0;
+}
+
+.texto-overlay {
+    position: relative;
+    top: 0;
+    
+    left: 0;
+    right: 0;
+    z-index: 1;
+    margin-top: 150px;
+    color: white;
+    padding: 20px;
+}
+
+.texto-overlay p {
+    text-align: justify;
+    font-family: 'Lora', serif;
+    font-size: 22px;
+    margin-right: 80px;
+    margin-left: 80px;
+    text-shadow: 2px 2px 2px black;
+}
+
+#imgBackground {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    width: 100%;
+    z-index: -2;
+    position: absolute;
+}
+#imageHorizon{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+    margin-top: 40px;
+}
+#imageChris{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+    margin-top: 40px; 
+}
+.titulo {
+    color: white;
+    text-align: center;
+    margin-top: -80px;
+    font-size: 40px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    margin-left: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .titulo{
+        margin-right: -380px;
+        margin-left: 20px;
+    }
+    .cabecalho{
+        margin-left: auto;
+    }
+}
+
+#img {
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+    position: fixed;
+    z-index: 1;
+    margin-left: 20px;
+    margin-right: 10px;
+    display: block;
+}
+
+#logoWhats {
+    width: 100px;
+    height: 100px;
+    float: right;
+    z-index: 3;
+    margin-top: 5px;
+    margin-right: 40px;
+}
+
+.img-container {
+    display: flex;
+}
+
+#ytLogo {
+    height: 130px;
+    z-index: 1;
+    position: relative;
+    margin-left: 360px;
+}
+
+#igLogo {
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+    position: relative;
+    margin-top: 40px;
+    margin-left: 10px;
+}
+
+#fbLogo {
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+    position: relative;
+    margin-top: 40px;
+    margin-left: 70px;
+}
+
+li:hover {
+    background-color: #b3b0b1;
+    color: black;
+    transition: 0.3s linear;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+#menu {
+    position: fixed;
+    left: -320px;
+    transition: all .3s;
+    display: grid;
+    grid-template-rows: 65px;
+    margin-top: 50px;
+}
+
+label {
+    padding: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+#link,
+#link2,
+#link3,
+#link4,
+#link5 {
+    color: white;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+a {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    display: inline-block;
+}
+
+li {
+    height: 100%;
+    background: rgba(0, 0, 0, 1);
+    /* Cor de fundo preta */
+    top: 80px;
+    position: relative;
+    width: 250px;
+    list-style: none;
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    z-index: 3;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+input[type="checkbox"]:checked~nav {
+    transform: translateX(350px);
+}
+
+#pt1,
+#pt2,
+#pt3,
+#pt4,
+#pt5,
+#pt6,
+#pt7 {
+    font-family: 'Libre Baskerville', serif;
+    color: #ab7523;
+    padding: 12px;
+    margin-top: 135px;
+    font-style: normal;
+    margin-left: 80px;
+    font-size: 35px;
+    z-index: inherit;
+}
+
+#imgLocal {
+    width: 65%;
+    height: auto;
+    align-content: center;
+    transition: transform 0.3s ease;
+    margin-left: 250px;
+    z-index: 2;
+    
+}
+
+#imgLocal:hover {
+    transform: scale(1.05);
+}
+
+#paragrafo1,
+#paragrafo,
+#paragrafo3,
+#paragrafo2,
+#paragrafo4,
+#paragrafo5,
+#paragrafo6,
+#paragrafo7,
+#paragrafo8 {
+    font-family: 'Lora', serif;
+    color: white;
+    position: relative;
+    padding: 12px;
+    margin-top: 20px;
+    font-style: normal;
+    margin-left: 80px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: justify;
+    margin-right: 80px;
+    z-index: -1;
+}
+#paragrafo7{
+    width: 85%;
+    text-align: justify;
+    border: #ccc;
+    border-width: 2px;
+    border-style: solid;
+    height: 580px;
+    z-index: 0;
+}
+#paragrafo8{
+    width: 85%;
+    text-align: justify;
+    border: #ccc;
+    border-width: 2px;
+    border-style: solid;
+    height: 580px;
+    z-index: 0;
+}
+.imageHome {
+    width: 100%;
+    height: auto;
+}
+
+p {
+    z-index: -1;
+}
+
+#colaborador{
+    border-radius: 50%;
+    width: 340px;
+    margin-top: 50px;
+    display: flex;
+    margin-left: 460px;
+}
+#colaborador2{
+    border-radius: 50%;
+    width: 340px;
+    margin-top: 50px;
+    display: flex;  
+    margin-left: 460px;
+}
+h4{
+    font-weight: normal;
+    margin-top: 10px;
+}
+.btn-download {
+    background-color: #6b4f4f; /* Tom marrom */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 70px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+    z-index: 1;
+    width: 100%;
+}
+
+.btn-download:hover {
+    background-color: #b3884f; /* Tom de marrom mais claro para hover */
+}
+@media screen and (max-width: 1300px) {
+
+    #colaborador,
+    #colaborador2{
+        margin-left: 355px;
+    }
+    h4{
+        font-weight: normal;
+        margin-top: 10px;
+    }
+    .btn-download {
+        background-color: #6b4f4f; /* Tom marrom */
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 70px;
+        margin-bottom: 20px;
+        transition: background-color 0.3s;
+        z-index: 1;
+        width: 100%;
+    }
+    
+}
+@media screen and (max-width: 1100px){
+    #colaborador,
+    #colaborador2{
+        margin-left: 250px;
+    }
+}
+@media screen and (max-width: 1000px){
+    #colaborador,
+    #colaborador2{
+        margin-left: 240px;
+    }
+}
+@media screen and (max-width: 993px){
+    #colaborador,
+    #colaborador2{
+        margin-left: 300px;
+    }
+}
+@media screen and (max-width: 940px){
+    #colaborador,
+    #colaborador2{
+        margin-left: 220px;
+    }
+}
+@media screen and (max-width: 860px){
+    #colaborador,
+    #colaborador2{
+        margin-left: 150px;
+    }
+    #paragrafo7,
+    #paragrafo8 {
+        width: 80%;
+    }
+    .btn-download{
+        margin-top: 55px;
+    }
+}
+@media screen and (max-width: 1030px) {
+    #mail{
+        margin-left: 10px;
+    }
+    #ytLogo {
+        margin-left: 30px;
+    }
+    
+    #igLogo {
+        margin-left: 10px;
+    }
+}  
+@media screen and (max-width: 780px){
+    #mail, #foot{
+        margin-left: 10px;
+        font-size: 18px;
+    }
+    #ytLogo {
+        margin-left: 30px;
+        height: 100px;
+        margin-top: 10px;
+    }
+    
+    #igLogo {
+        margin-left: 10px;
+        height: 40px;
+        width: 40px;
+        
+    }
+    #fbLogo{
+        height: 40px;
+        width: 40px;
+    }
+    footer{
+        height: 100px;
+    }
+    #colaborador,
+    #colaborador2{
+        margin-left: 100px;
+    }
+} 
+@media screen and (max-width: 768px) {
+    .area-button{
+        width: 120px;
+        height: 80px;
+    }
+    #mail, #foot{
+        margin-left: 10px;
+        font-size: 18px;
+    }
+    #ytLogo {
+        margin-left: 30px;
+        height: 100px;
+        margin-top: 10px;
+    }
+    
+    #igLogo {
+        margin-top: 10px;        
+        height: 40px;
+        width: 40px;
+        
+    }
+    #fbLogo{
+        margin-top: 10px;
+        height: 40px;
+        width: 40px;
+    }
+    #baixo{
+        height: 150px;
+        padding: 0;
+    }
+    .cabecalho {
+        height: 100px;
+    }
+    .titulo {
+        font-size: 30px;
+        margin-left: -400px;
+        margin-top: -65px;
+    }
+
+    #img {
+        width: 70px;
+        height: 70px;
+        margin-top: 15px;
+        margin-left: -1 px;
+    }
+    #imgHome{
+        width: 100px;
+    }
+
+    #logoWhats {
+        width: 30px;
+        height: 30px;
+        margin-right: -10px;
+    }
+
+
+    li {
+        width: 200px;
+    }
+
+    #pt1,
+    #pt2,
+    #pt3,
+    #pt4,
+    #pt5,
+    #pt6,
+    #pt7 {
+        font-size: 22px;
+        margin-left: 40px;
+    }
+    
+    #imgLocal {
+        margin-left: 120px;
+        margin-right: 20px;
+    }
+
+    #paragrafo1,
+    #paragrafo,
+    #paragrafo3,
+    #paragrafo2,
+    #paragrafo4,
+    #paragrafo5,
+    #paragrafo6 {
+        font-size: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 80%;
+    }
+    #logoWhats {
+        width: 80px;
+        height: 80px;
+        position: fixed;
+        top: 5px;
+        right: 20px;
+        z-index: 1;
+    }
+    footer {
+        display: flex;
+        height: 100px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    
+    #logoWhats {
+        width: 80px;
+        height: 80px;
+
+    }
+    
+    .img-container {
+        display: flex;
+        align-items: center;
+    }
+    #paragrafo7,
+    #paragrafo8{
+        margin-left: 30px;
+    }
+    
+    
+}
+@media screen and (max-width: 616px) {
+        .titulo {
+            font-size: 25px;
+        }
+        #logoWhats{
+            width: 65px;
+            height: 65px;
+            margin-top: 5px;
+        }
+        #img{
+            margin-left: -5px;
+        }
+        .img-container {
+            margin-bottom: 10px;
+        }
+        #imgLocal{
+            margin-left: 80px;
+        }
+        #colaborador,
+        #colaborador2{
+            margin-left: 180px;
+            margin-top: 20px;
+            width: 130px;
+        }
+        .btn-download{
+            margin-top: 20px;
+        }
+        #paragrafo7,
+        #paragrafo8{
+            height: 300px;
+            font-size: 15px;
+            margin-left: 50px;
+        }
+
+}
+
+@media screen and (max-width: 494px){
+        .titulo {
+            font-size: 22px;
+            margin-top: -55px;
+        }
+        #logoWhats{
+            width: 50px;
+            height: 50px;
+            margin-top: 10px;
+        }
+        #img{
+            margin-left: -5px;
+            width: 50px;
+            height: 50px;
+            margin-top: 20px;
+        }
+        .cabecalho{
+            height: 90px;
+         
+        }
+        #paragrafo7,
+        #paragrafo8{
+            margin-left: 30px;
+        }
+        #pt1,
+        #pt2,
+        #pt3,
+        #pt4,
+        #pt5,
+        #pt6,
+        #pt7 {
+            margin-right: 40px;
+        }
+        #imgLocal{
+            margin-left: 60px;
+        }
+        #mail,
+        #foot{
+            font-size: 16px;
+        }
+        #ytLogo{
+            margin-left: -20px;
+        }
+        #menu{
+            
+            grid-template-rows: 60px;
+            width: 20px;
+            padding: 0;
+        }
+}
+@media screen and (max-width: 568px){
+    #colaborador,
+    #colaborador2{
+        margin-left: 150px;
+        margin-top: 20px;
+        width: 130px;
+    }
+    .btn-download{
+        margin-top: 20px;
+    }
+    #paragrafo7,
+    #paragrafo8{
+        margin-left: 30px;
+    }
+}
+@media screen and (max-width: 470px) {
+    #colaborador,
+    #colaborador2{
+        margin-left: 120px;
+        margin-top: 20px;
+        width: 130px;
+    }
+    #paragrafo7,
+    #paragrafo8{
+        margin-left: 30px;
+    }
+    .btn-download{
+        margin-top: 20px;
+    }
+    
+}
+@media screen and (max-width: 414px) {
+        .titulo{
+            font-size: 20px;
+        }   
+        .area-button{
+            width: 100px;
+            height: 50px;
+            padding: 0;
+        }
+        #colaborador,
+        #colaborador2{
+            margin-left: 110px;
+            margin-top: 20px;
+            width: 100px;
+        }
+        #paragrafo7,
+        #paragrafo8{
+            margin-left: 30px;
+        }
+        .btn-download{
+            margin-top: 20px;
+        }   
+}
+@media screen and (max-width: 376px){
+        .titulo {
+            font-size: 18px;
+        }
+        .area-button{
+            width: 80px;
+            height: 40px;
+            padding: 0;
+        }   
+        #logoWhats{
+            margin-top: 15px;
+        }
+        #img{
+            margin-left: -5px;
+            margin-top: 24px;
+            width: 40px;
+            height: 40px;
+        }
+        #pt1,
+        #pt2,
+        #pt3,
+        #pt4,
+        #pt5,
+        #pt6,
+        #pt7 {
+            font-size: 18px;
+        }
+        #paragrafo1,
+        #paragrafo,
+        #paragrafo3,
+        #paragrafo2,
+        #paragrafo4,
+        #paragrafo5,
+        #paragrafo6 {
+            font-size: 12px;
+            width: 80%;
+        }
+        #foot,
+        #mail{
+            font-size: 15px;
+        } 
+        #colaborador,
+        #colaborador2{
+            width: 90px;
+        }
+        .btn-download{
+            height: 30px;
+            justify-content: center;
+            display: flex;
+        }
+}
+@media screen and (max-width: 338px) {
+        .titulo {
+            font-size: 15px;
+        }
+        #logoWhats{
+            margin-top: 20px;
+            width: 40px;
+            height: 40px;
+        }
+        #img{
+            margin-left: -5px;
+            margin-top: 26px;
+            width: 35px;
+            height: 35px;
+        }
+        #pt1,
+        #pt2,
+        #pt3,
+        #pt4,
+        #pt5,
+        #pt6,
+        #pt7,
+        dialog {
+            font-size: 14px;
+        }
+        #paragrafo1,
+        #paragrafo,
+        #paragrafo3,
+        #paragrafo2,
+        #paragrafo4,
+        #paragrafo5,
+        #paragrafo6 {
+            font-size: 10px;
+            width: 80%;
+        }
+        #foot,
+        #mail{
+            font-size: 12px;
+        }
+        #igLogo{
+            width: 30px;
+            height: 30px;
+        }
+        #fbLogo{
+            width: 30px;
+            height: 30px;   
+        }
+        #ytLogo{
+            width: 105px;
+            height: 80px;
+            margin-right: 30px;
+        } 
+}
+@media screen and (max-width: 290px){
+        .titulo{
+            font-size: 14px;
+        }
+        .area-button{
+            width: 100px;
+            height: 50px;
+            padding: 0;
+        }   
+}
