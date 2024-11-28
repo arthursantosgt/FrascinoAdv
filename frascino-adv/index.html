@@ -31,22 +31,46 @@
     <div id="chat-popup">
         <button id="chat-toggle">Alguma dúvida?</button>
         <div id="chat-box">
-            <form id="chat-form">
+            <form id="chat-form" action="">
                 <label for="nome">Seu nome:</label>
                 <input type="text" id="nome" name="nome" required placeholder="Digite seu nome" />
     
                 <label for="numero">Seu número (WhatsApp):</label>
-                <input type="text" id="numero" name="numero" required placeholder="Ex.: 5511999999999" />
+                <input type="text" id="numero" name="numero" required placeholder="Ex.: 55xxxxxxx-xxxx" />
     
                 <label for="mensagem">Mensagem:</label>
                 <textarea id="mensagem" name="mensagem" required placeholder="Digite sua mensagem"></textarea>
     
-                <button type="submit">Enviar Mensagem</button>
+                <button type="submit" id="btn-msg">Enviar Mensagem</button>
             </form>
         </div>
     </div>
     
-    
+    <script>
+        const btn = document.getElementById('btn-msg');
+    const form = document.getElementById('chat-form');
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Previne o envio padrão do formulário
+
+        // Captura os valores dos campos
+        const nome = document.getElementById('nome').value;
+        const numero = document.getElementById('numero').value;
+        const mensagem = document.getElementById('mensagem').value;
+
+        // Número do WhatsApp da empresa
+        const phone = '5511966516531';
+
+        // Formata a mensagem
+        const encodedMessage = encodeURIComponent(`Mensagem de: ${nome}. Telefone ${numero}. Mensagem: ${mensagem}`);
+
+        // Monta a URL do WhatsApp com a mensagem
+        const url = `https://api.whatsapp.com/send?phone=${phone}&text=${encodedMessage}`;
+
+        // Abre o WhatsApp em uma nova aba
+        window.open(url, '_blank');
+    });
+    </script>
 
     <h2 id="pt1">Quem somos?</h2>
     <div id="paragrafo1">
