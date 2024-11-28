@@ -28,6 +28,26 @@
     </nav>
     <img src="img/imgHome3.jpg" class="imageHome">
 
+    <div id="chat-popup">
+        <button id="chat-toggle">Alguma dúvida?</button>
+        <div id="chat-box">
+            <form id="chat-form">
+                <label for="nome">Seu nome:</label>
+                <input type="text" id="nome" name="nome" required placeholder="Digite seu nome" />
+    
+                <label for="numero">Seu número (WhatsApp):</label>
+                <input type="text" id="numero" name="numero" required placeholder="Ex.: 5511999999999" />
+    
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" required placeholder="Digite sua mensagem"></textarea>
+    
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </div>
+    </div>
+    
+    
+
     <h2 id="pt1">Quem somos?</h2>
     <div id="paragrafo1">
         <p>
@@ -85,62 +105,27 @@
             da Administração Pública.
         </p>
     </div>
-    <div class="areas">
-        <div class="area-parte">
-                <div class="area-info">
-                    <h2 class="area1">Contencioso Cível</h2>
-                </div>
-                <button class="area-button">Mais Áreas de Atuação</button>
-            <dialog id="modal">
-                <h2>Contencioso Cível</h2><br>
-                    <p>
-                        Estamos aptos a propor ou defender o interesse de nossos clientes em qualquer ação 
-                        de indenização, com a expertise de advogados objetivos que sabem orientá-lo para 
-                        preparar os documentos e provas determinantes para satisfação de seus interesses.<br><br>
-    
-                    Atuamos em:<br><br>
-                    •	Processos judiciais, administrativos ou arbitragem nas áreas de direito civil.<br>
-                    •	Sucessões (inventário judicial e extrajudicial)<br>
-                    •	Direito do consumidor.<br>
-                    •	Propriedade intelectual.<br>
-                    •	Direitos autorais. <br>
-                    •	Direito imobiliário (despejo, renovatória, revisional, usucapião judicial e extrajudicial, 
-                    alienação judicial, extinção de condomínio, dentre outras).<br>
-                    •	Defesa do Endividado, juros abusivos e fraudes/golpes bancários.. <br>
-    
-                    </p><br><br><br><br>
-                <h2>Consultivo, Imobiliário e Paralegal</h2><br>
-                    <p>
-                        Na área consultiva atuamos na:
-                        Área de contratos em geral,
-                        Elaboração, análise, revisão e negociação, bem como em auditorias e consultorias legais, pareceres, palestras, 
-                        planejamento sucessório.<br><br>
-                        Negociação imobiliáriaem geral, compra, locação, built-to-suit, leilão judicial ou extrajudicial, desde a negociação, 
-                        análise de riscos, auditoria, elaboração de minutas, até o registro final. Contamos com equipe paralegal que atua na 
-                        regularização de imóveis, registros, atualização de certidões na Grande São Paulo em Cartórios, Fóruns e outros órgãos da 
-                        Administração Pública.
-                        
-                    </p><br><br><br><br>
-                <h2>Tributário Contencioso</h2><br>
-                    <p>Na área tributária atuamos na: Elaboração de mandado de segurança de itbi, e itcmd (impostos), para garantir o 
-                        recolhimento dos impostos com a base de cálculo reduzida.
-                    </p><br><br><br><br>
-                <h2>Entreterimento</h2><br>
-                    <p>
-                        Nossa área de Mídia e Entretenimento foi criada para atender as demandas dos clientes inseridos neste setor e 
-                        suas necessidades, de modo a oferecer consultoria e soluções jurídicas específicas, como: Alvará de participação 
-                        de menor em filmagens, eventos e similares Questões relativas a produção audiovisual e fonográfica, Televisão, Mídias 
-                        sociais, Direitos autorais, Propriedade intelectual e Direito de imagem. 
-                    </p><br><br><br><br>
-                <h2>Área da Sáude</h2><br>
-                    <p>
-                        Na área de saúde atuamos em serviços como: Obtenção de Habeas Corpus para garantir o cultivo de cannabis para uso 
-                        medicinal (TDAH, Parkinson, autismo, dores crônicas, esportivas, cardiologia, psiquiatria). Obtenção de liminar 
-                        para garantir medicamento e procedimentos cirúrgicos negados por convênio
-                    </p>
-            <button id="closeBtn">Ok</button>
-            </dialog>
-            </div>
+
+    <h2 id="pt4">Contencioso Cível</h2>
+    <div id="paragrafo2">
+        <p>
+            Estamos aptos a propor ou defender o interesse de nossos clientes em qualquer ação 
+            de indenização, com a expertise de advogados objetivos que sabem orientá-lo para 
+            preparar os documentos e provas determinantes para satisfação de seus interesses.<br><br>
+
+        Atuamos em:<br><br>
+        •	Processos judiciais, administrativos ou arbitragem nas áreas de direito civil.<br>
+        •	Sucessões (inventário judicial e extrajudicial)<br>
+        •	Direito do consumidor.<br>
+        •	Propriedade intelectual.<br>
+        •	Direitos autorais. <br>
+        •	Direito imobiliário (despejo, renovatória, revisional, usucapião judicial e extrajudicial, 
+        alienação judicial, extinção de condomínio, dentre outras).<br>
+        •	Defesa do Endividado, juros abusivos e fraudes/golpes bancários.. <br>
+
+        </p>
+    </div>
+
     <h2 id="pt4">Consultivo, Imobiliário e Paralegal</h2>
     <div id="paragrafo2">
         <p>
@@ -156,6 +141,8 @@
         </p>
         <img src="img/imageChris.jpg" id="imageChris">
     </div>
+
+
     <h2 id="pt5">Tributário Contencioso</h2>
         <div id="paragrafo4">
             <p>Na área tributária atuamos na: Elaboração de mandado de segurança de itbi, e itcmd (impostos), para garantir o 
@@ -222,6 +209,16 @@
             <a href="https://www.facebook.com/frascinoadv/"><img src="img/fbLogo.png" id="fbLogo"></a>
         </div>
     </footer>
+    <script>
+        const chatToggle = document.getElementById('chat-toggle');
+        const chatBox = document.getElementById('chat-box');
+    
+        // Alternar exibição do chat
+        chatToggle.addEventListener('click', () => {
+            chatBox.classList.toggle('active'); // Adiciona ou remove a classe que controla a animação
+        });
+    </script>
+    
     <script src="js/index.js"></script>
 </div>
 </body>

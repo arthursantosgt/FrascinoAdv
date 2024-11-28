@@ -12,45 +12,131 @@
 body {
     background-color: #000000;
 }
-dialog{
-    width: 80%;
-    max-height: 60%;
-    padding: 20px;
-    margin-left: 20px;
-    margin-top: 40px;
-    background-color:#e9e4d8;
-    font-family: 'Josefin Sans', sans-serif;
-}
-/*.whatsapp-button {
+
+
+/* Estilo do popup */
+#chat-popup {
     position: fixed;
     bottom: 20px;
     right: 20px;
     z-index: 1000;
 }
 
-.whatsapp-button a {
-    display: block;
+#chat-toggle {
+    background-color: #0c0a07;
     color: #fff;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    text-align: center;
-    font-size: 30px;
-    line-height: 60px;
-    text-decoration: none;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
 }
 
-.whatsapp-button a:hover {
-    background-color: #0c1d0d;
+/* Estilo do chat box */
+#chat-box {
+    position: fixed;
+    bottom: -300px; /* Fora da tela inicialmente */
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 350px;
+    opacity: 0; /* Invisível inicialmente */
+    transform: translateY(100%); /* Preparado para animação */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Transições suaves */
 }
-#zapi-btn{
-    width: 100%;
-}*/
+
+/* Quando ativo (visível) */
+#chat-box.active {
+    bottom: 60px; /* Posição final visível */
+    opacity: 1; /* Visível */
+    transform: translateY(0); /* Fica no lugar */
+}
+
+
 #closeBtn{
     width: 60px;
     height: 30px;
     margin-top: 10px;
 }
+#chat-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaçamento entre os elementos */
+}
+
+#chat-box label {
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    font-weight: bold;
+    
+}
+
+#chat-box input[type="text"],
+#chat-box textarea {
+    width: 94%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#chat-box input[type="text"]:focus,
+#chat-box textarea:focus {
+    border-color: #6b4f4f; /* Cor do foco */
+    box-shadow: 0 0 5px rgba(72, 38, 17, 0.5); /* Sombra ao focar */
+    outline: none;
+}
+
+#chat-box textarea {
+    resize: none; /* Desabilitar redimensionamento */
+    height: 80px;
+}
+/* Botão padrão */
+#chat-box button[type="submit"] {
+    background-color: #0c0a07;
+    color: #fff; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    padding: 12px 20px; /* Espaçamento interno */
+    border-radius: 25px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho do texto */
+    font-family: 'Poppins', sans-serif; /* Fonte moderna */
+    font-weight: bold;
+    cursor: pointer; /* Indica interatividade */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra ao redor */
+    transition: all 0.3s ease; /* Transição suave para hover e foco */
+    text-align: center;
+    letter-spacing: 0.5px; /* Espaçamento entre letras */
+}
+
+/* Efeito ao passar o mouse */
+#chat-box button[type="submit"]:hover {
+    background-color: #362828; /* Cor mais escura no hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
+    transform: translateY(-2px); /* Efeito de elevação */
+}
+
+/* Foco no botão */
+#chat-box button[type="submit"]:focus {
+    outline: none; /* Remove o contorno padrão do navegador */
+    background-color: #467E44; /* Leve variação de cor */
+    box-shadow: 0 0 8px rgba(83, 136, 75, 0.7); /* Sombra de foco */
+}
+
+/* Desabilitado */
+#chat-box button[type="submit"]:disabled {
+    background-color: #b5b5b5; /* Cor neutra para estado desabilitado */
+    cursor: not-allowed; /* Cursor indicando indisponibilidade */
+    box-shadow: none; /* Remove sombra */
+}
+
 .area-button{
     padding: 20px;
     margin-left: 80px;
